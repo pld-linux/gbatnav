@@ -1,0 +1,14 @@
+diff -u gbatnav-1.0.4/po.orig/es.po gbatnav-1.0.4/po/es.po
+--- gbatnav-1.0.4/po.orig/es.po	Thu Apr 18 05:11:08 2002
++++ gbatnav-1.0.4/po/es.po	Wed Aug  4 01:52:42 2004
+@@ -11,8 +11,8 @@
+ "Last-Translator: Ricardo Quesada <riq@core-sdi.com>\n"
+ "Language-Team: es <LL@li.org>\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=CHARSET\n"
+-"Content-Transfer-Encoding: ENCODING\n"
++"Content-Type: text/plain; charset=iso-8859-1\n"
++"Content-Transfer-Encoding: 8bit\n"
+ 
+ #: gbnclient/gbnclient.c:48 gbnrobot/robot_proceso.c:39
+ msgid "Server name. Default is localhost"
