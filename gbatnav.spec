@@ -5,8 +5,6 @@ Version:	1.0.2
 Release:	2
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	http://download.sourceforge.net/batnav/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_fixes.patch
