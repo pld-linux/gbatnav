@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://download.sourceforge.net/batnav/%{name}-%{version}.tar.gz
+# Source0-md5:	9975f2d4d0c481fd97a910958007b42d
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://batnav.sourceforge.net/
 BuildRequires:	autoconf
