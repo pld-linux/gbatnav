@@ -2,7 +2,7 @@ Summary:	Batalla Naval is a networked multiplayer battleship game
 Summary(pl):	Batalla Naval - sieciowa gra wojenna dla wielu graczy
 Name:		gbatnav
 Version:	1.0.4
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
