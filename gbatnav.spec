@@ -2,13 +2,14 @@ Summary:	Batalla Naval is a networked multiplayer battleship game
 Summary(pl):	Batalla Naval - sieciowa gra wojenna dla wielu graczy
 Name:		gbatnav
 Version:	1.0.4
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	9975f2d4d0c481fd97a910958007b42d
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-desktop.patch
+Patch2:		%{name}-po.patch
 URL:		http://batnav.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -18,7 +19,6 @@ BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Batalla Naval is a networked naval battleship game.
@@ -30,6 +30,7 @@ Batalla Naval to sieciowa gra wojenna.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
