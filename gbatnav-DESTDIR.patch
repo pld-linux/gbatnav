@@ -1,40 +1,18 @@
-diff -Nru gbatnav-0.74.0/gbnclient/Makefile.am gbatnav-0.74.0.new/gbnclient/Makefile.am
---- gbatnav-0.74.0/gbnclient/Makefile.am	Sat Apr  3 02:23:05 1999
-+++ gbatnav-0.74.0.new/gbnclient/Makefile.am	Sun Oct 29 12:11:09 2000
-@@ -47,4 +47,4 @@
- Games_DATA = gbnclient.desktop
- 
- install-data-local:
--	-chgrp games $(bindir)/gbnclient && chmod 2111 $(bindir)/gbnclient
-+	-chgrp games $(DESTDIR)$(bindir)/gbnclient && chmod 2755 $(DESTDIR)$(bindir)/gbnclient
-diff -Nru gbatnav-0.74.0/gbnrobot/Makefile.am gbatnav-0.74.0.new/gbnrobot/Makefile.am
---- gbatnav-0.74.0/gbnrobot/Makefile.am	Fri Apr  2 19:57:39 1999
-+++ gbatnav-0.74.0.new/gbnrobot/Makefile.am	Sun Oct 29 12:10:47 2000
-@@ -33,4 +33,4 @@
- EXTRA_DIST = README AUTHORS $(appicon_DATA)
- 
- install-data-local:
--	-chgrp games $(bindir)/gbnclient && chmod 755 $(bindir)/gbnrobot
-+	-chgrp games $(DESTDIR)$(bindir)/gbnclient && chmod 755 $(DESTDIR)$(bindir)/gbnrobot
 diff -Nru gbatnav-0.74.0/gbnserver/Makefile.am gbatnav-0.74.0.new/gbnserver/Makefile.am
 --- gbatnav-0.74.0/gbnserver/Makefile.am	Sat Apr  3 02:37:42 1999
 +++ gbatnav-0.74.0.new/gbnserver/Makefile.am	Sun Oct 29 12:10:23 2000
-@@ -46,11 +46,11 @@
- 
+@@ -48,9 +48,9 @@
  Games_DATA = gbnserver.desktop
  
-+help_DATA = index.html gbatnav-topic.dat
-+
  install-data-local:
 -	-$(mkinstalldirs) $(scoredir) $(helpdir)
 -	-touch $(scoredir)/gbatnav.scores
 -	-chown games.games $(scoredir)/gbatnav.scores
--	-chmod 664 $(scoredir)/gbatnav.scores
--	-chgrp games $(bindir)/gbnserver && chmod 2111 $(bindir)/gbnserver
--	-$(INSTALL_DATA) $(srcdir)/index.html $(helpdir)
--	-$(INSTALL_DATA) $(srcdir)/gbatnav-topic.dat $(helpdir)/topic.dat
-+	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
++	-$(mkinstalldirs) $(DESTDIR)$(scoredir) $(DESTDIR)$(helpdir)
 +	-touch $(DESTDIR)$(scoredir)/gbatnav.scores
 +	-chown games.games $(DESTDIR)$(scoredir)/gbatnav.scores
-+	-chmod 664 $(DESTDIR)$(scoredir)/gbatnav.scores
-+	-chgrp games $(DESTDIR)$(bindir)/gbnserver && chmod 2755 $(DESTDIR)$(bindir)/gbnserver
+ 	-chmod 664 $(scoredir)/gbatnav.scores
+-	-$(INSTALL_DATA) $(srcdir)/index.html $(helpdir)
+-	-$(INSTALL_DATA) $(srcdir)/gbatnav-topic.dat $(helpdir)/topic.dat
++	-$(INSTALL_DATA) $(srcdir)/index.html $(DESTDIR)$(helpdir)
++	-$(INSTALL_DATA) $(srcdir)/gbatnav-topic.dat $(DESTDIR)$(helpdir)/topic.dat
