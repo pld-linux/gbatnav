@@ -1,0 +1,16 @@
+diff -urN gbatnav-1.0.4.orig/gbnclient/gbnclient.desktop gbatnav-1.0.4/gbnclient/gbnclient.desktop
+--- gbatnav-1.0.4.orig/gbnclient/gbnclient.desktop	2002-04-08 06:30:39.000000000 +0200
++++ gbatnav-1.0.4/gbnclient/gbnclient.desktop	2004-07-04 13:16:58.580003856 +0200
+@@ -9,3 +9,4 @@
+ Icon=gnome-gbatnav.png
+ Terminal=0
+ Type=Application
++Categories=GTK;GNOME;Game;BoardGame;
+diff -urN gbatnav-1.0.4.orig/gbnserver/gbnserver.desktop gbatnav-1.0.4/gbnserver/gbnserver.desktop
+--- gbatnav-1.0.4.orig/gbnserver/gbnserver.desktop	2002-04-08 06:30:54.000000000 +0200
++++ gbatnav-1.0.4/gbnserver/gbnserver.desktop	2004-07-04 13:16:51.743043232 +0200
+@@ -9,3 +9,4 @@
+ Icon=gnome-gbatnavd.png
+ Terminal=0
+ Type=Application
++Categories=GTK;GNOME;Game;BoardGame;
