@@ -1,16 +1,52 @@
-diff -urN gbatnav-1.0.4.orig/gbnclient/gbnclient.desktop gbatnav-1.0.4/gbnclient/gbnclient.desktop
---- gbatnav-1.0.4.orig/gbnclient/gbnclient.desktop	2002-04-08 06:30:39.000000000 +0200
-+++ gbatnav-1.0.4/gbnclient/gbnclient.desktop	2004-07-04 13:16:58.580003856 +0200
-@@ -9,3 +9,4 @@
+--- gbatnav-1.0.4/gbnclient/gbnclient.desktop~	Wed Jul 14 09:57:16 2004
++++ gbatnav-1.0.4/gbnclient/gbnclient.desktop	Wed Jul 14 09:59:06 2004
+@@ -1,11 +1,16 @@
+ [Desktop Entry]
+-Name=Gnome Batalla Naval client
+-Name[es]=Cliente Gnome del Batalla Naval
+-Name[ja]=GNOME ≥§¿Ô•≤°º•‡ (•Ø•È•§•¢•Û•»)
+-Comment=Gnome Batalla Naval client
+-Comment[es]=Cliente Gnome del Batalla Naval
+-Comment[ja]=GNOME ≥§¿Ô•≤°º•‡ (•Ø•È•§•¢•Û•»)
++Name=Batalla Naval client
++Name[es]=Cliente del Batalla Naval
++Name[ja]=Êµ∑Êà¶„Ç≤„Éº„É† („ÇØ„É©„Ç§„Ç¢„É≥„Éà)
++Name[pl]=Klient Batalla Naval
++Comment=GNOME Batalla Naval client
++Comment[es]=Cliente GNOME del Batalla Naval
++Comment[ja]=GNOME Êµ∑Êà¶„Ç≤„Éº„É† („ÇØ„É©„Ç§„Ç¢„É≥„Éà)
++Comment[pl]=Klient gry Batalla Naval dla GNOME
+ Exec=gbnclient 
  Icon=gnome-gbatnav.png
- Terminal=0
+-Terminal=0
++Terminal=false
  Type=Application
 +Categories=GTK;GNOME;Game;BoardGame;
-diff -urN gbatnav-1.0.4.orig/gbnserver/gbnserver.desktop gbatnav-1.0.4/gbnserver/gbnserver.desktop
---- gbatnav-1.0.4.orig/gbnserver/gbnserver.desktop	2002-04-08 06:30:54.000000000 +0200
-+++ gbatnav-1.0.4/gbnserver/gbnserver.desktop	2004-07-04 13:16:51.743043232 +0200
-@@ -9,3 +9,4 @@
++Encoding=UTF-8
++# vi: encoding=utf-8
+--- gbatnav-1.0.4/gbnserver/gbnserver.desktop~	Wed Jul 14 09:53:38 2004
++++ gbatnav-1.0.4/gbnserver/gbnserver.desktop	Wed Jul 14 09:59:35 2004
+@@ -1,11 +1,16 @@
+ [Desktop Entry]
+-Name=Gnome Batalla Naval server
+-Name[es]=Servidor Gnome del Batalla Naval
+-Name[ja]=GNOME ≥§¿Ô•≤°º•‡ (•µ°º•–)
+-Comment=Gnome Batalla Naval server
+-Comment[es]=Servidor Gnome del Batalla Naval
+-Comment[ja]=GNOME ≥§¿Ô•≤°º•‡ (•µ°º•–)
++Name=Batalla Naval server
++Name[es]=Servidor del Batalla Naval
++Name[ja]=Êµ∑Êà¶„Ç≤„Éº„É† („Çµ„Éº„Éê)
++Name[pl]=Serwer Batalla Naval
++Comment=GNOME Batalla Naval server
++Comment[es]=Servidor GNOME del Batalla Naval
++Comment[ja]=GNOME Êµ∑Êà¶„Ç≤„Éº„É† („Çµ„Éº„Éê)
++Comment[pl]=Serwer gry Batalla Naval dla GNOME
+ Exec=gbnserver
  Icon=gnome-gbatnavd.png
- Terminal=0
+-Terminal=0
++Terminal=false
  Type=Application
 +Categories=GTK;GNOME;Game;BoardGame;
++Encoding=UTF-8
++# vi: encoding=utf-8
