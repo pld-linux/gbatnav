@@ -1,4 +1,5 @@
 Summary:	Batalla Naval is a networked multiplayer battleship game
+Summary(pl):	Batalla Naval - sieciowa gra wojenna dla wielu graczy
 Name:		gbatnav
 Version:	1.0.2
 Release:	2
@@ -22,7 +23,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-Batallla Naval is a networked naval battleship game.
+Batalla Naval is a networked naval battleship game.
+
+%description -l pl
+Batalla Naval to sieciowa gra wojenna.
 
 %prep
 %setup -q
