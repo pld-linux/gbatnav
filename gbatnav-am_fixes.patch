@@ -1,0 +1,22 @@
+--- gbatnav-1.0.1/gbnserver/Makefile.am~	Sun Apr 22 05:33:56 2001
++++ gbatnav-1.0.1/gbnserver/Makefile.am	Sun Apr 22 05:34:08 2001
+@@ -33,7 +33,7 @@
+ 	batnavggz.h
+ 
+ 
+-gbnserver_DEPENDENCIES = ../common/libbatnavcommon.a $(GGZLIB) @INTLDEPS@
++gbnserver_DEPENDENCIES = ../common/libbatnavcommon.a $(GGZLIB)
+ gbnserver_LDADD =			\
+ 	../common/libbatnavcommon.a	\
+ 	$(GGZLIB)			\
+--- gbatnav-1.0.1/gbnclient/Makefile.am~	Sun Apr 22 05:33:56 2001
++++ gbatnav-1.0.1/gbnclient/Makefile.am	Sun Apr 22 05:35:38 2001
+@@ -41,7 +41,7 @@
+ 	g_connect.h
+ 
+ 
+-gbnclient_DEPENDENCIES = ../common/libbatnavcommon.a $(GGZLIB) @INTLDEPS@
++gbnclient_DEPENDENCIES = ../common/libbatnavcommon.a $(GGZLIB)
+ gbnclient_LDADD =			\
+ 	../common/libbatnavcommon.a 	\
+ 	$(GGZLIB)			\
