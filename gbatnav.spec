@@ -27,7 +27,7 @@ Batallla Naval is a networked naval battleship game.
 
 %build
 gettextize --copy --force
-alclocal -I macros
+aclocal -I macros
 autoconf
 automake -a -c
 %configure
