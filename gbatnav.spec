@@ -1,58 +1,50 @@
-%define name	gbatnav
-%define ver	0.74.0
-%define rel	1
-%define prefix  /usr
+Summary:	Batalla Naval is a networked multiplayer battleship game.
+Name:		gbatnav
+Version:	0.74.0
+Release:	1
+License:	GPL
+Group:		X11/Applications/Games
+Source0:	http://download.sourceforge.net/batnav/%{name}-%{version}.tar.gz
+Patch0:		%{name}-DESTDIR.patch
+URL:		http://batnav.sourceforge.net/
+BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	gnome-libs-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-Summary: Batalla Naval is a networked multiplayer battleship game.
-Name:		%name
-Version:	%ver
-Release:	%rel
-Copyright:	GPL
-Group:		Amusements/Games
-Source:		http://www.pjn.gov.ar/~rquesada/progs/%{name}-%{ver}.tar.gz
-URL:		http://www.pjn.gov.ar/~rquesada/batnav.html
-Requires:       gtk+ >= 1.2.0
-BuildRoot:      /var/tmp/%{name}-%{ver}-root
-Docdir:		%{prefix}/doc
+%define		_prefix		/usr/X11R6
 
 %description
 Batallla Naval is a networked naval battleship game.
 
-%changelog
-* Fri Jun 25 1999 Gregory McLean <gregm@comstar.net>
-
-- Initial spec file written.
-
 %prep
 %setup -q
+%patch -p1
 
 %build
-%ifarch alpha
- MYARCH_FLAGS="--host=alpha-redhat-linux"
-%endif
-MYCFLAGS="$RPM_OPT_FLAGS"
-CFLAGS="$MYCFLAGS" ./configure $MYARCH_FLAGS --prefix=%prefix --localstatedir=/var/lib
-
-if [ "$SMP" != "" ]; then
-  (make "MAKE=make -k -j $SMP"; exit 0)
-  make
-else
-  make
-fi
+gettextize --copy --force
+automake
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make prefix=$RPM_BUILD_ROOT%{prefix} install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	Gamesdir=%{_applnkdir}/Games
+
+gzip -9nf AUTHORS README README.IPv6 NEWS TODO ChangeLog
+
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
-%defattr(-, root, root)
-%doc AUTHORS COPYING README README.IPv6 NEWS TODO ChangeLog
-%{prefix}/bin/*
-%{prefix}/share/pixmaps/*
-%{prefix}/share/locale/*/*/*
-%{prefix}/share/gnome/apps/Games/*
-%{prefix}/share/gnome/help/*/*
+%files -f %{name}.lang
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) %{_bindir}/*
+%{_datadir}/pixmaps/*
+%{_applnkdir}/Games/*
