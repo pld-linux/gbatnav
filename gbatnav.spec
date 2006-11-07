@@ -59,4 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README README.IPv6 NEWS TODO ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
