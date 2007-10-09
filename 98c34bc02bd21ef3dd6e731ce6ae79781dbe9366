@@ -1,0 +1,3 @@
+- release 2,
+- rebuild on new gnome-libs linked with audiofile 0.2.1,
+- regenerate all am/ac files for allow build in automake > 1.4 environment.
